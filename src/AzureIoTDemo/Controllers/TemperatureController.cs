@@ -56,6 +56,9 @@ namespace AzureIoTDemo.Controllers
 
             // Because binding doesn't seem to work.
             tempRead.ID = 0;
+            // Because NTP is hard.
+            tempRead.Date = DateTime.Now;
+
             _context.Add(tempRead);
             await _context.SaveChangesAsync();
 
