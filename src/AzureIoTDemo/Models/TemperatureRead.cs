@@ -7,6 +7,7 @@ namespace AzureIoTDemo.Models
 {
     public class TemperatureRead
     {
+        public int ID { get; set; }
         public string Place { get; set; }
         public DateTime Date { get; set; }
         public float Value { get; set; }
