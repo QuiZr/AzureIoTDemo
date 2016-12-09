@@ -14,6 +14,7 @@ DELETE | /api/temperature/{id} | Deletes selected read
 ## Troubleshooting
 * If Bower downloads wrong wersion of boostrap: http://stackoverflow.com/questions/37584520/bootstrap-3-3-6-jquery-2-2-4-version-exception/38460014#38460014  
 * If you're at step 8 of Azure deployment and you can't see "Apply this migration on publish" checkbox this probably means that you have something wrong in project.json.
+* If your app crashes at start make sure that you've newest version of .NET Core tools: https://www.microsoft.com/net/download/core#/current
 
 ## Azure deployment tutorial:
 1. First create new web app  
