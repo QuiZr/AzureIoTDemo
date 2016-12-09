@@ -11,6 +11,10 @@ GET | /api/temperature/{id} | Temperature read with selected id
 POST | /api/temperature | Uploads a new temperature read. Place and value string needed in request body 
 DELETE | /api/temperature/{id} | Deletes selected read
 
+## Troubleshooting
+* If Bower downloads wrong wersion of boostrap: http://stackoverflow.com/questions/37584520/bootstrap-3-3-6-jquery-2-2-4-version-exception/38460014#38460014  
+* If you're at step 8 of Azure deployment and you can't see "Apply this migration on publish" checkbox this probably means that you have something wrong in project.json.
+
 ## Azure deployment tutorial:
 1. First create new web app  
 ![](http://i.imgur.com/zArzn8f.png)
