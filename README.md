@@ -2,6 +2,14 @@
 Simple ASP.NET Core app that collects data from ESP8266 or other IoT devices  
 Link: http://azureiotdemonet.azurewebsites.net/
 
+Available requests:
+
+Type | Path | Data
+--- | --- | ---
+GET | /api/temperature | All temperature reads
+GET | /api/temperature/{id} | Temperature read with selected id
+POST | /api/temperature | Uploads a new temperature read. Place and value string needed in request body. 
+
 ## Azure deployment tutorial:
 1. First create new web app  
 ![](http://i.imgur.com/zArzn8f.png)
