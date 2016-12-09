@@ -45,6 +45,12 @@ namespace AzureIoTDemo
 
             app.UseStaticFiles();
 
+            if (!env.IsProduction())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+            }
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
