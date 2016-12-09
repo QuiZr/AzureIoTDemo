@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<AzureIoTDemo.Models.TemperatureRead>
 
+<h1 style="text-align:center">I can't make a chart, front-end is hard >.></h1>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -25,9 +27,7 @@
                     @Html.DisplayFor(modelItem => item.ID)
                 </td>
                 <td>
-                    <a asp-area="" asp-controller="Temp" asp-action="Chart" asp-route-place=@item.Place>
-                        @Html.DisplayFor(modelItem => item.Place)
-                    </a>
+                    @Html.DisplayFor(modelItem => item.Place)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Date)
