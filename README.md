@@ -8,7 +8,8 @@ Type | Path | Data
 --- | --- | ---
 GET | /api/temperature | All temperature reads
 GET | /api/temperature/{id} | Temperature read with selected id
-POST | /api/temperature | Uploads a new temperature read. Place and value string needed in request body. 
+POST | /api/temperature | Uploads a new temperature read. Place and value string needed in request body 
+DELETE | /api/temperature/{id} | Deletes selected read
 
 ## Azure deployment tutorial:
 1. First create new web app  
@@ -26,7 +27,7 @@ POST | /api/temperature | Uploads a new temperature read. Place and value string
 ![](http://i.imgur.com/HktQsjJ.png)
 8. Check both of those checkboxes and paste that edited connection string (step 4/5)
 ![](http://i.imgur.com/snGD3TZ.png)
-9. Pray.
+9. Pray
 10. Now you can edit AzureIoTDemo.ino with SSID, password and IP of your published app and flash it to your IoT device
 10. ???
 11. Profit.
