@@ -64,5 +64,25 @@ namespace AzureIoTDemo.Controllers
 
             return Ok();
         }
+
+        // DELETE /api/temperature/{id}
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var tempRead = await _context.TemperatureReads.FirstOrDefaultAsync(t => t.ID == id);
+
+            if (tempRead == null)
+                return BadRequest();
+
+            _context
+                .TemperatureReads
+                .Remove(tempRead);
+
+            await _context
+                .SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }
