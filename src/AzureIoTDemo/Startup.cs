@@ -45,10 +45,17 @@ namespace AzureIoTDemo
 
             app.UseStaticFiles();
 
+            TemperatureContext temperatureContext = app.ApplicationServices.GetRequiredService<TemperatureContext>();
+
             if (!env.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
+                temperatureContext.Seed();
+            }
+            else if (!temperatureContext.TemperatureReads.Any())
+            {
+                temperatureContext.Seed();
             }
 
             app.UseMvc(routes =>
