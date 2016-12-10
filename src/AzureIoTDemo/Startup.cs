@@ -51,19 +51,19 @@ namespace AzureIoTDemo
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-                temperatureContext.Seed();
+                temperatureContext.Seed(false);
             }
             else if (!temperatureContext.TemperatureReads.Any())
             {
-                temperatureContext.Seed();
+                temperatureContext.Seed(true);
             }
 
             app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Temp}/{action=Index}");
-            });
+                    {
+                        routes.MapRoute(
+                            name: "default",
+                            template: "{controller=Temp}/{action=Index}");
+                    });
         }
     }
 }

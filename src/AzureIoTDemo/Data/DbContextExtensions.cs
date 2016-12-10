@@ -1,4 +1,5 @@
 ﻿using AzureIoTDemo.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,12 @@ namespace AzureIoTDemo.Data
 {
     public static class DbContextExtensions
     {
-        public static void Seed(this TemperatureContext context)
+        public static void Seed(this TemperatureContext context, bool isInProduction)
         {
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+            if (!isInProduction)
+                context.Database.EnsureDeleted();
+
+            context.Database.Migrate();
 
             AddTemperatureReads(context, 30);
 
