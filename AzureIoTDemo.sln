@@ -1,16 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5900D5B1-B46A-4982-9E5E-1DA02882402E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9500158-60CC-434F-8259-642567A78C46}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AzureIoTDemo", "src\AzureIoTDemo\AzureIoTDemo.xproj", "{52B1B6A0-09DB-4D4C-BF99-D2F9AEA759DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureIoTDemo", "src\AzureIoTDemo\AzureIoTDemo.csproj", "{52B1B6A0-09DB-4D4C-BF99-D2F9AEA759DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,7 +19,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{52B1B6A0-09DB-4D4C-BF99-D2F9AEA759DF} = {5900D5B1-B46A-4982-9E5E-1DA02882402E}
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FE4B1A5-BA22-472D-B7F3-E1C675CEC0C1}
 	EndGlobalSection
 EndGlobal
